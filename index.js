@@ -1,6 +1,7 @@
 // This one will be a little tricky. So check out this overview first: https://www.youtube.com/watch?v=sJ-c3BA-Ypo
 
-// 1. Create a variable to store the singleton instance of the bank branch. "bankBranchInstance"
+// 1. Variable to store the singleton instance of the bank branch. "bankBranchInstance"
+let bankBranchInstance = null;
 
 // 2. Define a class called `BankBranch` for managing branch information.
 
