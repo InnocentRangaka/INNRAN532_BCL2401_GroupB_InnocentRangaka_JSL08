@@ -24,6 +24,21 @@ class BankBranch {
     getBranchInfo() {
         return this.branchInfo;
     }
+
+    // `getBranchInfo` method to retrieve branch name.
+    getBranchName() {
+        return this.branchInfo.name;
+    }
+    
+    // `getBranchInfo` method to retrieve branch address.
+    getBranchAddress() {
+        return this.branchInfo.address;
+    }
+
+    // `getBranchInfo` method to set branch details.
+    setBranchInfo(newInfo) {
+        this.branchInfo = newInfo;
+    }
 }
 
 
@@ -38,6 +53,19 @@ console.log(branchB.getBranchInfo()); // Output: { name: "Rustenburg Branch", ad
 
 //    - Verify that `branchA` and `branchB` are both referring to the same instance by comparing them using `===`.
 console.log(branchA === branchB);   // Output: true (Both refer to the same instance)
+
+// 6. Additional Usage
+//    - Use the `getBranchName` method to retrieve branch name from the instances.
+console.log(branchA.getBranchName()); // Output: { "Rustenburg Branch" }
+console.log(branchB.getBranchName()); // Output: { "Rustenburg Branch" } (Same as branchA)
+
+//    - Update branch information (modifies the single instance)
+branchA.setBranchInfo({ name: "Johannesburg Branch", address: "456 JHB" });
+console.log(branchB.getBranchInfo()); // Outputs name: "Capetown Branch", address: "456 CPT" (updated info)
+
+//    - Use the `getBranchName` method to retrieve branch name from the instances.
+console.log(`${branchA.getBranchName()} at ${branchA.getBranchAddress()}`); // Output: { "Johannesburg Branch" at "456 JHB" }
+console.log(`${branchB.getBranchName()} at ${branchB.getBranchAddress()}`); // Output: { "Johannesburg Branch" at "456 JHB" } (Same as branchA)
 
 // This pseudo-code provides a step-by-step explanation of how to implement the Singleton Pattern for managing a single instance of the `BankBranch` class throughout the application, ensuring that multiple instances refer to the same object.
 
