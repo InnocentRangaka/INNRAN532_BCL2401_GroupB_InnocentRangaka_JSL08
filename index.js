@@ -8,8 +8,8 @@ class BankBranch {
     // 3. In the `BankBranch` class:
     //    - A constructor that takes `branchInfo` as a parameter.
     constructor(branchInfo) {
-    //    - Inside the constructor, check if the `bankBranchInstance` variable is null (indicating no instance exists).
-    //    - If `bankBranchInstance` is null, create a new instance with the provided `branchInfo` and assign it to `bankBranchInstance`.
+        //    - Inside the constructor, check if the `bankBranchInstance` variable is null (indicating no instance exists).
+        //    - If `bankBranchInstance` is null, create a new instance with the provided `branchInfo` and assign it to `bankBranchInstance`.
         if (!bankBranchInstance) {
             bankBranchInstance = this; // Assign the created instance to the singleton variable
             this.branchInfo = branchInfo;
@@ -31,6 +31,10 @@ class BankBranch {
 //    - Create instances of the `BankBranch` class, such as `branchA` and `branchB`, with different branch information.
 const branchA = new BankBranch({ name: "Rustenburg Branch", address: "123 Phokeng" });
 const branchB = new BankBranch({ name: "Capetown Branch", address: "456 CPT" });
+
+//    - Use the `getBranchInfo` method to retrieve branch information from the instances.
+console.log(branchA.getBranchInfo()); // Output: { name: "Rustenburg Branch", address: "123 Phokeng" }
+console.log(branchB.getBranchInfo()); // Output: { name: "Rustenburg Branch", address: "123 Phokeng" } (Same as branchA)
 
 
 // This pseudo-code provides a step-by-step explanation of how to implement the Singleton Pattern for managing a single instance of the `BankBranch` class throughout the application, ensuring that multiple instances refer to the same object.
