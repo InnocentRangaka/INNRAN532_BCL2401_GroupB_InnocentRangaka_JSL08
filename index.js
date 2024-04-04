@@ -27,6 +27,12 @@ class BankBranch {
 }
 
 
+// 5. In the usage section:
+//    - Create instances of the `BankBranch` class, such as `branchA` and `branchB`, with different branch information.
+const branchA = new BankBranch({ name: "Rustenburg Branch", address: "123 Phokeng" });
+const branchB = new BankBranch({ name: "Capetown Branch", address: "456 CPT" });
+
+
 // This pseudo-code provides a step-by-step explanation of how to implement the Singleton Pattern for managing a single instance of the `BankBranch` class throughout the application, ensuring that multiple instances refer to the same object.
 
 // NOTES:
